@@ -14,3 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+#mapId {
+  border: 3px solid black;
+  width: 96vw;
+  height: 70vh;
+}
