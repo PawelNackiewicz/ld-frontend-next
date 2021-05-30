@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import Cors from 'cors'
 import { Facility } from "../../types/facility";
+import initMiddleware from '../../lib/init-middleware'
 
 const Facilities = [
   {
@@ -51,6 +53,14 @@ const Facilities = [
     longitude: 50.170769,
   },
 ];
+
+const cors = initMiddleware(
+  // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
+  Cors({
+    // Only allow requests with GET, POST and OPTIONS
+    methods: ['GET', 'POST', 'OPTIONS'],
+  })
+)
 
 export default (req: NextApiRequest, res: NextApiResponse<Facility[]>) => {
   res.status(200).json(Facilities);
