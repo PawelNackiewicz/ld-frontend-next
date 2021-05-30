@@ -22,6 +22,13 @@ const Header = () => {
               </a>
             </Link>
           </li>
+          <li className={styles.navItem}>
+            <Link href="/" passHref>
+              <a href="replace" className={styles.navItemLink}>
+                Dołącz do projektu
+              </a>
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

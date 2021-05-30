@@ -2,6 +2,7 @@ import React from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { LatLngTuple } from 'leaflet';
 import { Facility } from '../../types/facility';
+import styles from './LeafletMap.module.scss';
 
 const defaultLatLng: LatLngTuple = [50.675106, 17.921297];
 const zoom = 12;
@@ -23,11 +24,11 @@ const MyPopupMarker = ({
 }: MarkerProps) => (
   <Marker position={position}>
     <Popup>
-      <div>
-        <img alt={name} src="/shop_image.jpg" />
-        <p>{name}</p>
-        <div>
-          <img alt="location" src="/location.svg" />
+      <div className={styles.facilityItem}>
+        <img className={styles.facilityImage} alt={name} src="/shop.jpg" />
+        <p className={styles.facilityTitle}>{name}</p>
+        <div className={styles.locationContainer}>
+          <img alt="location" src="/location.svg" className={styles.locationIcon} />
           <p>
             {streetName} {houseNumber}, {city} {postCode}
           </p>
