@@ -1,5 +1,5 @@
-import Cors from 'cors'
-import initMiddleware from '../../lib/init-middleware'
+import Cors from 'cors';
+import initMiddleware from '../../lib/init-middleware';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 // Initialize the cors middleware
@@ -8,17 +8,17 @@ const cors = initMiddleware(
   Cors({
     // Only allow requests with GET, POST and OPTIONS
     methods: ['GET', 'POST', 'OPTIONS'],
-  })
-)
+  }),
+);
 
 type Data = {
-    name: string;
+  name: string;
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   // Run cors
-  await cors(req, res)
+  await cors(req, res);
 
   // Rest of the API logic
-  res.json({ name: 'Hello Everyone!' })
+  res.json({ name: 'Hello Everyone!' });
 }

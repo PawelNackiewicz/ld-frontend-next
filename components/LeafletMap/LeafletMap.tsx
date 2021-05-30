@@ -1,16 +1,13 @@
-import React from "react";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import { LatLngTuple } from "leaflet";
-import { Facility } from "../../types/facility";
-import styles from './LeafletMap.module.scss';
+import React from 'react';
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import { LatLngTuple } from 'leaflet';
+import { Facility } from '../../types/facility';
 
 const defaultLatLng: LatLngTuple = [50.675106, 17.921297];
 const zoom = 12;
 
 const MyMarkersList = ({ markers }: { markers: Array<MarkerProps> }) => {
-  const items = markers.map(({ key, ...props }) => (
-    <MyPopupMarker key={key} {...props} />
-  ));
+  const items = markers.map(({ key, ...props }) => <MyPopupMarker key={key} {...props} />);
   return <>{items}</>;
 };
 
@@ -26,11 +23,11 @@ const MyPopupMarker = ({
 }: MarkerProps) => (
   <Marker position={position}>
     <Popup>
-      <div className={styles.["facility__item"]}>
-        <img alt={name} src='/shop_image.jpg' className={styles.["facility__image"]} />
-        <p className={styles.["facility__title"]}>{name}</p>
-        <div className={styles.["location__container"]}>
-          <img alt="location" src='/location.svg' className={styles.["location__icon"]} />
+      <div>
+        <img alt={name} src="/shop_image.jpg" />
+        <p>{name}</p>
+        <div>
+          <img alt="location" src="/location.svg" />
           <p>
             {streetName} {houseNumber}, {city} {postCode}
           </p>
@@ -43,21 +40,21 @@ const MyPopupMarker = ({
 );
 
 type LeafletMapProps = {
-  facilities: Facility []
-}
+  facilities: Facility[];
+};
 
-const LeafletMap = ({facilities} : LeafletMapProps) => {
-    
-  const markers: MarkerProps[] = facilities?.map((facility) => {
-    const { id, longitude, latitude, ...facilityDeteails } = facility;
+const LeafletMap = ({ facilities }: LeafletMapProps) => {
+  const markers: MarkerProps[] =
+    facilities?.map((facility) => {
+      const { id, longitude, latitude, ...facilityDeteails } = facility;
       return {
-          key: id,
-          content: {
-              ...facilityDeteails,
-          },
-          position: [longitude ?? 0, latitude ?? 0] as LatLngTuple,
+        key: id,
+        content: {
+          ...facilityDeteails,
+        },
+        position: [longitude ?? 0, latitude ?? 0] as LatLngTuple,
       };
-  }) ?? [];
+    }) ?? [];
 
   return (
     <MapContainer id="mapId" center={defaultLatLng} zoom={zoom}>

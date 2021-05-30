@@ -1,0 +1,27 @@
+{
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "extends": ["react-app", "plugin:jsx-a11y/recommended"],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true,
+    "node": true
+  },
+  "plugins": ["jsx-a11y"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
+    "import/no-default-export": "off",
+    "react/display-name": "error",
+    "quotes": [2, "single", { "avoidEscape": true }]
+  },
+  "overrides": [
+    {
+      "files": "pages/**/*.tsx",
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ]
+}

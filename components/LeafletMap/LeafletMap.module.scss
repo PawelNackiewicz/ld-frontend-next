@@ -1,30 +1,30 @@
 .facility__item {
-    display: flex;
-    flex-direction: column;
-    max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
 
-    .facility__title {
-        font-size: 1.5rem;
-        margin: 0.3rem 0;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
+  .facility__title {
+    font-size: 1.5rem;
+    margin: 0.3rem 0;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 
-    .facility__image {
-        margin-top: 1rem;
-    }
+  .facility__image {
+    margin-top: 1rem;
+  }
 
-    p {
-        margin: 0.3rem 0;
-    }
+  p {
+    margin: 0.3rem 0;
+  }
 }
 
 .location__container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    .location__icon {
-        width: 26px;
-        height: 26px;
-    }
+  .location__icon {
+    width: 26px;
+    height: 26px;
+  }
 }

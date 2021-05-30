@@ -1,19 +1,15 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import dynamic from "next/dynamic";
-import { Facility } from "../types/facility";
-import { QueryClient, useQuery } from "react-query";
-import { dehydrate } from "react-query/hydration";
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+import dynamic from 'next/dynamic';
+import { QueryClient, useQuery } from 'react-query';
+import { dehydrate } from 'react-query/hydration';
 
-const LeafletMap = dynamic(
-  () => import("../components/LeafletMap/LeafletMap"),
-  {
-    ssr: false,
-  }
-);
+const LeafletMap = dynamic(() => import('../components/LeafletMap/LeafletMap'), {
+  ssr: false,
+});
 
 export default function Home() {
-  const { data } = useQuery("facilities", fetcher);
+  const { data } = useQuery('facilities', fetcher);
 
   return (
     <div className={styles.container}>
@@ -41,8 +37,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
     </div>
@@ -50,12 +45,12 @@ export default function Home() {
 }
 
 const toJSON = (r: Response) => r.json();
-const fetcher = () => fetch('http://localhost:3000/api/facilities').then(toJSON)
+const fetcher = () => fetch('http://localhost:3000/api/facilities').then(toJSON);
 
 export async function getStaticProps() {
   const queryClient = new QueryClient();
 
-  await queryClient.prefetchQuery("facilities", fetcher);
+  await queryClient.prefetchQuery('facilities', fetcher);
 
   return {
     props: {
