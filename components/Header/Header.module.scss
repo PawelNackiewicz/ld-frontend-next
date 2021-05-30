@@ -51,3 +51,13 @@
     transform-origin: left;
   }
 }
+
+.logoContainer {
+  list-style: none;
+  margin-top: 1.5rem;
+  z-index: 10000;
+  background-color: $white;
+  border-radius: 10rem;
+  border: 0.5rem solid $green;
+  cursor: pointer;
+}

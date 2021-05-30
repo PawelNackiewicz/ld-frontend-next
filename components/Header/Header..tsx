@@ -1,29 +1,34 @@
 import React from 'react';
 import styles from './Header.module.scss';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Header = () => {
   return (
     <header>
       <nav className={styles.nav}>
         <ul className={styles.navList}>
-          <li className={styles.navItem}>
+          <li className={styles.logoContainer}>
             <Link href="/" passHref>
               {/* https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md#case-i-use-nextjs-and-im-getting-this-error-inside-of-links */}
-              <a href="replace" className={styles.navItemLink}>
-                Strona Główna
-              </a>
+              <Image
+                width={80}
+                height={80}
+                alt="location"
+                src="/logo.svg"
+                className={styles.logo}
+              />
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="/" passHref>
+            <Link href="/o_projekcie" passHref>
               <a href="replace" className={styles.navItemLink}>
                 O Projekcie
               </a>
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="/" passHref>
+            <Link href="/dolacz_do_projektu" passHref>
               <a href="replace" className={styles.navItemLink}>
                 Dołącz do projektu
               </a>

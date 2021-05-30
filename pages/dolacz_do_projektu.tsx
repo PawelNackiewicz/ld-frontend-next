@@ -1,17 +1,12 @@
 import Head from 'next/head';
-import dynamic from 'next/dynamic';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header.';
 
-const LeafletMap = dynamic(() => import('../components/LeafletMap/LeafletMap'), {
-  ssr: false,
-});
-
-export default function Home() {
+export default function AboutProject() {
   return (
     <div>
       <Head>
-        <title>Lokalne Dobrodziejstwa</title>
+        <title>Dołącz do projektu</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
@@ -21,7 +16,7 @@ export default function Home() {
         />
       </Head>
       <Header />
-      <LeafletMap />
+      <h1>Hello dołacz do projektu</h1>
       <Footer />
     </div>
   );

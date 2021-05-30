@@ -38,7 +38,6 @@ const MyPopupMarker = ({
           <p>
             {streetName} {houseNumber}, {city} {postCode}
           </p>
-          )
         </div>
         <p>{description}</p>
       </div>
