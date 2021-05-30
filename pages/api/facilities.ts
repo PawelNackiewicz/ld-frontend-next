@@ -66,7 +66,7 @@ const cors = initMiddleware(
   }),
 );
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse<Image[]>) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse<Facility[]>) {
   await cors(req, res);
   res.status(200).json(Facilities);
 }
