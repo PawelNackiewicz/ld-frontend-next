@@ -1,0 +1,11 @@
+@import 'src/scss/main';
+
+.footer-container {
+  height: calc(#{$footer-height-web} - 1px);
+  border-top: 1px solid $orange;
+  width: 100%;
+  background-color: $color-secondary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
