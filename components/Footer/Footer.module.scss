@@ -10,9 +10,6 @@
   align-items: center;
   margin-top: 1rem;
   color: $white;
-
-  @media screen and (min-width: 600px) {
-    position: absolute;
-    bottom: 0;
-  }
+  position: absolute;
+  bottom: 0;
 }

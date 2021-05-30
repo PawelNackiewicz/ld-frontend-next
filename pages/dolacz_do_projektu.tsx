@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header.';
+import styles from './styles/pages.module.scss';
+import Image from 'next/image';
 
 export default function AboutProject() {
   return (
@@ -16,7 +18,10 @@ export default function AboutProject() {
         />
       </Head>
       <Header />
-      <h1>Hello dołacz do projektu</h1>
+      <div className={styles.pageContainer}>
+        <h1>Hello dolacz do projektu</h1>
+        <Image alt="apple" src="/animations/apple.svg" width={160} height={160} />
+      </div>
       <Footer />
     </div>
   );
