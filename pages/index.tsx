@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import { QueryClient, useQuery } from 'react-query';
-import { dehydrate } from 'react-query/hydration';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header.';
 
@@ -10,8 +8,6 @@ const LeafletMap = dynamic(() => import('../components/LeafletMap/LeafletMap'), 
 });
 
 export default function Home() {
-  const { data } = useQuery('facilities', fetcher);
-
   return (
     <div>
       <Head>
@@ -24,29 +20,9 @@ export default function Home() {
           crossOrigin=""
         />
       </Head>
-
       <Header />
-
-      <main>
-        <LeafletMap facilities={data} />
-      </main>
-
+      <LeafletMap />
       <Footer />
     </div>
   );
-}
-
-const toJSON = (r: Response) => r.json();
-const fetcher = () => fetch('http://localhost:3000/api/facilities').then(toJSON);
-
-export async function getStaticProps() {
-  const queryClient = new QueryClient();
-
-  await queryClient.prefetchQuery('facilities', fetcher);
-
-  return {
-    props: {
-      dehydratedState: dehydrate(queryClient),
-    },
-  };
 }

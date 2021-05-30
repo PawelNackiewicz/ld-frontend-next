@@ -1,11 +1,17 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { LatLngTuple } from 'leaflet';
 import { Facility } from '../../types/facility';
 import styles from './LeafletMap.module.scss';
+import axiosConfig from '../../config/axiosConfig';
 
 const defaultLatLng: LatLngTuple = [50.675106, 17.921297];
 const zoom = 12;
+
+const fetchedFacilities = async (): Promise<Facility[]> =>
+  await (
+    await axiosConfig.get('/api/facilities')
+  ).data;
 
 const MyMarkersList = ({ markers }: { markers: Array<MarkerProps> }) => {
   const items = markers.map(({ key, ...props }) => <MyPopupMarker key={key} {...props} />);
@@ -40,11 +46,15 @@ const MyPopupMarker = ({
   </Marker>
 );
 
-type LeafletMapProps = {
-  facilities: Facility[];
-};
+const LeafletMap = () => {
+  const [facilities, setFacilities] = useState<Facility[]>([]);
 
-const LeafletMap = ({ facilities }: LeafletMapProps) => {
+  useEffect(() => {
+    fetchedFacilities().then((res: Facility[]) => {
+      setFacilities(res);
+    });
+  }, []);
+
   const markers: MarkerProps[] =
     facilities?.map((facility) => {
       const { id, longitude, latitude, ...facilityDeteails } = facility;
