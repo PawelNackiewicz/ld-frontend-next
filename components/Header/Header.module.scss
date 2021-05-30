@@ -1,15 +1,14 @@
-@import 'src/scss/main';
+@import 'styles/variables';
 
 .nav {
   width: 100%;
   height: $header-height-web;
   min-height: 2rem;
-  background: $color-brand; /* fallback for old browsers */
+  background: $green;
 }
 
-.nav__list {
+.navList {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
   margin: 0;
@@ -20,17 +19,15 @@
   }
 }
 
-.align-left {
-  display: flex;
-  align-items: center;
+.navItem {
+  list-style: none;
+  margin: 0 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75rem;
 }
 
-.align-right {
-  display: flex;
-  align-items: center;
-}
-
-.nav__item-link {
+.navItemLink {
   text-decoration: none;
   color: $white;
   position: relative;
@@ -53,12 +50,4 @@
     transform: scaleX(1);
     transform-origin: left;
   }
-}
-
-.nav__item {
-  list-style: none;
-  margin: 0 1rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 0.75rem;
 }

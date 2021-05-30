@@ -1,8 +1,9 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
 import dynamic from 'next/dynamic';
 import { QueryClient, useQuery } from 'react-query';
 import { dehydrate } from 'react-query/hydration';
+import Footer from '../components/Footer/Footer';
+import Header from '../components/Header/Header.';
 
 const LeafletMap = dynamic(() => import('../components/LeafletMap/LeafletMap'), {
   ssr: false,
@@ -12,7 +13,7 @@ export default function Home() {
   const { data } = useQuery('facilities', fetcher);
 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -24,22 +25,13 @@ export default function Home() {
         />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <Header />
+
+      <main>
         <LeafletMap facilities={data} />
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 }

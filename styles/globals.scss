@@ -1,14 +1,13 @@
+@import 'variables';
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  background-color: $light-green;
+  color: $black;
 }
 
 * {
@@ -16,7 +15,8 @@ a {
 }
 
 #mapId {
-  border: 3px solid black;
+  border: 3px solid $orange;
   width: 96vw;
-  height: 70vh;
+  height: 78vh;
+  margin: 2rem auto;
 }
