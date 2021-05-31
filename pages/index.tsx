@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import Footer from '../components/Footer/Footer';
-import Header from '../components/Header/Header.';
+import Layout from '../components/Layouts/Layouts';
 
 const LeafletMap = dynamic(() => import('../components/LeafletMap/LeafletMap'), {
   ssr: false,
@@ -9,10 +8,8 @@ const LeafletMap = dynamic(() => import('../components/LeafletMap/LeafletMap'), 
 
 export default function Home() {
   return (
-    <div>
+    <Layout>
       <Head>
-        <title>Lokalne Dobrodziejstwa</title>
-        <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
           href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -20,9 +17,7 @@ export default function Home() {
           crossOrigin=""
         />
       </Head>
-      <Header />
       <LeafletMap />
-      <Footer />
-    </div>
+    </Layout>
   );
 }

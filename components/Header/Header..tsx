@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Header = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <nav className={styles.nav}>
         <ul className={styles.navList}>
           <li className={styles.logoContainer}>

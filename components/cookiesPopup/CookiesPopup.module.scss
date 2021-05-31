@@ -1,0 +1,49 @@
+@import 'styles/variables';
+
+.cookiesContainer {
+  background-color: $yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem;
+  z-index: 1000;
+  box-shadow: 0 0 8px 2px #000;
+  @media screen and (min-width: 45em) {
+    left: 1rem;
+    bottom: 2rem;
+    max-width: 20rem;
+    border-radius: 5px;
+  }
+
+  button {
+    background-color: $color-brand;
+    text-transform: uppercase;
+    color: $white;
+    cursor: pointer;
+    margin: 0;
+    border: 1px solid $green;
+    -moz-border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    border-radius: 1rem;
+    -moz-box-shadow: 2px 2px 3px #666;
+    -webkit-box-shadow: 2px 2px 3px #666;
+    box-shadow: 2px 2px 3px #666;
+    padding: 0.5rem 1rem;
+    outline: 0;
+    -webkit-appearance: none;
+    transition: all 1s ease-out;
+
+    &:focus {
+      border-color: $color-secondary;
+    }
+
+    &:hover {
+      background-color: $green;
+    }
+  }
+}
