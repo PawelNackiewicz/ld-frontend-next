@@ -11,7 +11,9 @@ export default function AboutProject() {
           Projekt jest skierowany do osób które posiadają <strong>własne produkty</strong>.<br />{' '}
           Dołaczenie do projektu jest <strong>całkowicie darmowe</strong>.<br /> Aby dołączyć do
           projektu wystarczy wysłać maila na adres{' '}
-          <a href="mailto:lokalne.dobrodziejstwa@gmail.com">lokalne.dobrodziejstwa@gmail.com</a>{' '}
+          <a href="mailto:lokalne.dobrodziejstwa@gmail.com" className={styles.mailTo}>
+            lokalne.dobrodziejstwa@gmail.com
+          </a>{' '}
           <br />z niezbędnymi informacjami.{' '}
         </article>
         <div>

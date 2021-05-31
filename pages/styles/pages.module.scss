@@ -38,3 +38,13 @@
     max-width: 70%;
   }
 }
+
+.mailTo {
+  text-decoration: none;
+  color: $orange;
+  transition: all 1s ease-out;
+
+  &:hover {
+    color: $red;
+  }
+}
