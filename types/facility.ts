@@ -9,4 +9,6 @@ export type Facility = {
   readonly description?: string;
   readonly latitude?: number;
   readonly longitude?: number;
+  readonly logoPath?: string;
+  readonly backgroundImage?: string;
 };
