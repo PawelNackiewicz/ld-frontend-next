@@ -6,11 +6,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
+  margin: 1rem;
   min-height: $content-height-web;
 
   h1 {
     text-transform: uppercase;
+    text-align: center;
   }
 
   article {
