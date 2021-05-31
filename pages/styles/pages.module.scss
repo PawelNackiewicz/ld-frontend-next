@@ -1,0 +1,39 @@
+@import 'styles/variables';
+
+.pageContainer {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  min-height: $content-height-web;
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  article {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+}
+
+.logoContainer {
+  list-style: none;
+  margin: 0.5rem 0;
+  z-index: 10000;
+  background-color: $white;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.articleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  article {
+    max-width: 70%;
+  }
+}

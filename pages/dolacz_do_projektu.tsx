@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Layout from '../components/Layouts/Layouts';
-import styles from './styles/dolacz_do_projektu.module.scss';
+import styles from './styles/pages.module.scss';
 
 export default function AboutProject() {
   return (
@@ -11,7 +11,7 @@ export default function AboutProject() {
           Projekt jest skierowany do osób które posiadają <strong>własne produkty</strong>.<br />{' '}
           Dołaczenie do projektu jest <strong>całkowicie darmowe</strong>.<br /> Aby dołączyć do
           projektu wystarczy wysłać maila na adres{' '}
-          <a href="mailto:lokalne-dobrodziejstwa@gmail.com">lokalne-dobrodziejstwa@gmail.com</a>{' '}
+          <a href="mailto:lokalne.dobrodziejstwa@gmail.com">lokalne.dobrodziejstwa@gmail.com</a>{' '}
           <br />z niezbędnymi informacjami.{' '}
         </article>
         <div>
@@ -29,7 +29,7 @@ export default function AboutProject() {
             <strong>zgadzasz się na przetwarzanie ww danych</strong>.{' '}
           </p>
         </div>
-        <Image alt="apple" src="/animations/apple.svg" width={160} height={160} />
+        <Image alt="apple" src="/fruits/apple.svg" width={160} height={160} />
       </div>
     </Layout>
   );
