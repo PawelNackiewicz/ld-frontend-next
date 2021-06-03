@@ -25,13 +25,23 @@ type MarkerProps = {
 };
 
 const MyPopupMarker = ({
-  content: { name, description, streetName, houseNumber, city, postCode, backgroundImage },
+  content: {
+    name,
+    description,
+    streetName,
+    houseNumber,
+    city,
+    postCode,
+    backgroundImage,
+    logoPath,
+  },
   position,
 }: MarkerProps) => (
   <Marker position={position}>
     <Popup>
       <div className={styles.facilityItem}>
         <img className={styles.facilityImage} alt={name} src={backgroundImage} />
+        <img className={styles.logo} alt={name} src={logoPath} />
         <p className={styles.facilityTitle}>{name}</p>
         <div className={styles.locationContainer}>
           <img alt="location" src="/location.svg" className={styles.locationIcon} />
@@ -39,7 +49,7 @@ const MyPopupMarker = ({
             {streetName} {houseNumber}, {city} {postCode}
           </p>
         </div>
-        <p>{description}</p>
+        {/* <p>{description}</p> */}
       </div>
     </Popup>
   </Marker>

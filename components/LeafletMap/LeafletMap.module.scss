@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   max-height: 500px;
+  justify-content: center;
+  align-items: center;
 
   .facilityTitle {
     font-size: 1.5rem;
@@ -12,6 +14,7 @@
 
   .facilityImage {
     margin-top: 1rem;
+    max-width: 98%;
   }
 
   p {
@@ -27,4 +30,11 @@
     width: 26px;
     height: 26px;
   }
+}
+
+.logo {
+  border-radius: 100%;
+  position: relative;
+  margin-top: -15%;
+  max-width: 160px;
 }
