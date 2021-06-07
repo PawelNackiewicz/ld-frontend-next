@@ -5,7 +5,7 @@ import initMiddleware from '../../lib/init-middleware';
 
 const Facilities: Facility[] = [
   {
-    id: '600b033e7d246d1a4c8a49b4',
+    id: '600b033e7d246d1a4c8a49bsas4',
     name: 'Masarnia Golomb',
     website: 'www.masarnia-golomb.pl/',
     streetName: 'Pl. 1-go Maja',
