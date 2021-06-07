@@ -18,6 +18,7 @@ const Facilities: Facility[] = [
     longitude: 50.7034,
     logoPath: '/facilities/golomb/masarnia_golomb.png',
     backgroundImage: '/facilities/golomb/background1.jpeg',
+    facebook: 'https://www.facebook.com/Masarnia-Golomb-397058614363136',
   },
   {
     id: '600b033e7d246d1a4c8a49z4',
@@ -33,6 +34,7 @@ const Facilities: Facility[] = [
     longitude: 50.68028,
     logoPath: '/facilities/golomb/masarnia_golomb.png',
     backgroundImage: '/facilities/golomb/background2.jpeg',
+    facebook: 'https://www.facebook.com/Masarnia-Golomb-397058614363136',
   },
   {
     id: '600b033e7d246d1a4c8a49b1',
@@ -48,6 +50,7 @@ const Facilities: Facility[] = [
     longitude: 50.77832,
     logoPath: '/facilities/golomb/masarnia_golomb.png',
     backgroundImage: '/facilities/golomb/background3.jpeg',
+    facebook: 'https://www.facebook.com/Masarnia-Golomb-397058614363136',
   },
   {
     id: '600b033e7d246d1a4c8a49b455',
@@ -63,6 +66,7 @@ const Facilities: Facility[] = [
     longitude: 50.76133,
     logoPath: '/facilities/golomb/masarnia_golomb.png',
     backgroundImage: '/facilities/golomb/background4.jpeg',
+    facebook: 'https://www.facebook.com/Masarnia-Golomb-397058614363136',
   },
   {
     id: '600b033e7d246d1a4c8a49b4',
@@ -78,6 +82,7 @@ const Facilities: Facility[] = [
     longitude: 50.70893,
     logoPath: '/facilities/golomb/masarnia_golomb.png',
     backgroundImage: '/facilities/golomb/background1.jpeg',
+    facebook: 'https://www.facebook.com/Masarnia-Golomb-397058614363136',
   },
 ];
 

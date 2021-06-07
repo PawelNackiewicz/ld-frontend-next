@@ -11,4 +11,5 @@ export type Facility = {
   readonly longitude?: number;
   readonly logoPath?: string;
   readonly backgroundImage?: string;
+  readonly facebook?: string;
 };
