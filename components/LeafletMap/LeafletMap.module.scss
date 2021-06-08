@@ -29,6 +29,41 @@
     margin-top: -15%;
     max-width: 160px;
   }
+
+  .icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .locationContainer {
+    display: flex;
+    width: 100%;
+  }
+
+  .mediaContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    margin: 0.2rem 0;
+
+    .mediaItem {
+      display: flex;
+      align-items: center;
+      margin: 0.3rem 0;
+
+      a {
+        text-decoration: none;
+        color: $black;
+        margin: 0 0.3rem;
+      }
+
+      a:hover {
+        color: $red;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 .facilityItemMobile {

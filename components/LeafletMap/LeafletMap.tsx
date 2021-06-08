@@ -70,10 +70,24 @@ const MyPopupMarker = ({
           <img className={styles.logo} alt={name} src={logoPath} />
           <p className={styles.facilityTitle}>{name}</p>
           <div className={styles.locationContainer}>
-            <img alt="location" src="/location.svg" className={styles.locationIcon} />
+            <img alt="location" src="/location.svg" className={styles.icon} />
             <p>
               {streetName} {houseNumber}, {city} {postCode}
             </p>
+          </div>
+          <div className={styles.mediaContainer}>
+            {website && (
+              <div className={styles.mediaItem}>
+                <img alt="Strona www" src="/www.svg" className={styles.icon} />
+                <a href={website}>strona internetowa</a>
+              </div>
+            )}
+            {facebook && (
+              <div className={styles.mediaItem}>
+                <img alt="Strona www" src="/facebook.svg" className={styles.icon} />
+                <a href={facebook}>Znajdź nas na Facebooku</a>
+              </div>
+            )}
           </div>
         </div>
       </Popup>
