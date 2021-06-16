@@ -1,0 +1,70 @@
+@import 'styles/variables';
+
+.facilityItemMobile {
+  display: flex;
+  height: 28vh;
+  justify-content: center;
+  align-items: center;
+  width: 96vw;
+  background-color: $white;
+  color: $black;
+  font-size: 0.8rem;
+
+  .facilityTitle {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+  }
+
+  .facilityImage {
+    margin-top: 1rem;
+    max-height: 40%;
+  }
+
+  p {
+    margin: 0.3rem 0;
+  }
+
+  .locationContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .mediaContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    margin: 0.2rem 0;
+
+    .mediaItem {
+      display: flex;
+      align-items: center;
+      margin: 0.3rem 0;
+
+      a {
+        text-decoration: none;
+        color: $black;
+        margin: 0 0.3rem;
+      }
+
+      a:hover {
+        color: $red;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .logo {
+    border-radius: 100%;
+    max-width: 160px;
+  }
+}
