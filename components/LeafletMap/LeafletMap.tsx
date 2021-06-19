@@ -26,7 +26,7 @@ FacilityContext.displayName = 'FacilityContext';
 const LeafletMap = () => {
   const [facilities, setFacilities] = useState<Facility[]>([]);
   const [selectedFacility, setSelectedFacility] = useState<Facility | null>(null);
-  const [position, setPosition] = useState<[number, number] | null>(null);
+  const [position, setPosition] = useState<LatLngTuple>([50.668417899999994, 17.8791764]);
   const zoom = 12;
 
   useEffect(() => {
@@ -64,15 +64,13 @@ const LeafletMap = () => {
   return (
     <FacilityContext.Provider value={{ selectedFacility, setSelectedFacility }}>
       <div className={selectedFacility ? styles.mapForSelectedFacility : styles.map}>
-        {position && (
-          <MapContainer id="mapId" center={position} zoom={zoom}>
-            <TileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            />
-            <MyMarkersList markers={markers} />
-          </MapContainer>
-        )}
+        <MapContainer id="mapId" center={position} zoom={zoom}>
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          />
+          <MyMarkersList markers={markers} />
+        </MapContainer>
       </div>
       {selectedFacility && <SelectedFacility facility={selectedFacility} />}
     </FacilityContext.Provider>

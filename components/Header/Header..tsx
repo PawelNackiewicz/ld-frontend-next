@@ -9,15 +9,17 @@ const Header = () => {
       <nav className={styles.nav}>
         <ul className={styles.navList}>
           <li className={styles.logoContainer}>
-            <Link href="/" passHref>
+            <Link href="/">
               {/* https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md#case-i-use-nextjs-and-im-getting-this-error-inside-of-links */}
-              <Image
-                width={80}
-                height={80}
-                alt="location"
-                src="/logo.svg"
-                className={styles.logo}
-              />
+              <a href="replace">
+                <Image
+                  width={80}
+                  height={80}
+                  alt="location"
+                  src="/logo.svg"
+                  className={styles.logo}
+                />
+              </a>
             </Link>
           </li>
           <li className={styles.navItem}>

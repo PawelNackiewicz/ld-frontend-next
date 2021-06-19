@@ -7,7 +7,6 @@ const Facilities: Facility[] = [
   {
     id: '600b033e7d246d1a4c8a49bsas4',
     name: 'Masarnia Golomb',
-    website: 'http://http://www.masarnia-golomb.pl/',
     streetName: 'Pl. 1-go Maja',
     city: 'Szczedrzyk',
     houseNumber: '11',
@@ -23,7 +22,6 @@ const Facilities: Facility[] = [
   {
     id: '600b033e7d246d1a4c8a49z4',
     name: 'Masarnia Golomb',
-    website: 'http://www.masarnia-golomb.pl/',
     streetName: 'Juliusza Słowackiego',
     city: 'Ozimek',
     houseNumber: '1',
@@ -39,7 +37,6 @@ const Facilities: Facility[] = [
   {
     id: '600b033e7d246d1a4c8a49b1',
     name: 'Masarnia Golomb',
-    website: 'http://www.masarnia-golomb.pl/',
     streetName: 'ul. Osowska',
     city: 'Łubniany',
     houseNumber: '4',
@@ -55,7 +52,6 @@ const Facilities: Facility[] = [
   {
     id: '600b033e7d246d1a4c8a49b455',
     name: 'Masarnia Golomb',
-    website: 'http://www.masarnia-golomb.pl/',
     streetName: 'ul. Namysłowska',
     city: ' Dobrzeń Wielki',
     houseNumber: '8',
@@ -71,7 +67,6 @@ const Facilities: Facility[] = [
   {
     id: '600b033e7d246d1a4c8a49b4',
     name: 'Masarnia Golomb',
-    website: 'http://www.masarnia-golomb.pl/',
     streetName: 'Wróblińska',
     city: 'Kępa',
     houseNumber: '1',
