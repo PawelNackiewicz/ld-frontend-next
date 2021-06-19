@@ -1,5 +1,5 @@
 import { useEffect, useState, createContext } from 'react';
-import { MapContainer, TileLayer } from 'react-leaflet';
+import { MapContainer, TileLayer, useMap } from 'react-leaflet';
 import { LatLngTuple } from 'leaflet';
 import { MyMarkersList, MarkerProps } from './Markers/Markers';
 import { Facility } from '../../types/facility';
@@ -22,6 +22,16 @@ export const FacilityContext = createContext<FacilityData>({
   setSelectedFacility: () => {},
 });
 FacilityContext.displayName = 'FacilityContext';
+
+type MapDriverProps = {
+  position: LatLngTuple;
+};
+
+const MapDriver = ({ position }: MapDriverProps) => {
+  const map = useMap();
+  map.setView(position);
+  return null;
+};
 
 const LeafletMap = () => {
   const [facilities, setFacilities] = useState<Facility[]>([]);
@@ -65,6 +75,7 @@ const LeafletMap = () => {
     <FacilityContext.Provider value={{ selectedFacility, setSelectedFacility }}>
       <div className={selectedFacility ? styles.mapForSelectedFacility : styles.map}>
         <MapContainer id="mapId" center={position} zoom={zoom}>
+          <MapDriver position={position} />
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
