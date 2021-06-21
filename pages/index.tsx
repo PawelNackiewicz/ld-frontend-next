@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import Layout from '../components/Layouts/Layouts';
+import SearchBar from '../components/SearchBar/SearchBar';
 
 const LeafletMap = dynamic(() => import('../components/LeafletMap/LeafletMap'), {
   ssr: false,
@@ -17,6 +18,7 @@ export default function Home() {
           crossOrigin=""
         />
       </Head>
+      <SearchBar />
       <LeafletMap />
     </Layout>
   );

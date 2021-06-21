@@ -1,0 +1,32 @@
+@import 'styles/variables';
+
+.inputContainer {
+  margin: 2rem 0 0;
+  border-bottom: 2px solid $green;
+  width: 96vw;
+  min-height: 40px;
+  background-color: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputField {
+  width: calc(100% - 44px);
+  margin-left: 10px;
+  border: none;
+
+  &:active {
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.icon {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
